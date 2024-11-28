@@ -36,7 +36,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 
 # Setup working directory for the project
 WORKDIR /
-COPY --from=builder /src/ApiGateway/src/out  .
+COPY --from=builder /ApiGateway/src/out  .
 
 ENV ASPNETCORE_URLS https://*:443, http://*:80
 ENV ASPNETCORE_ENVIRONMENT docker
